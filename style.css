@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: #04242E;
+}
+
+header {
+    height: 10vh;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center ;
+}
+
+header img {
+    height: 48px;
+    padding-left: 32px;
+}
+
+footer {
+    height: 10vh;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display:flex;
+    flex-wrap: wrap;
+
+    background-color: #021821;
+
+    height: 80vh;
+}
+
+.image-container {
+    width: 240px;
+    height: 240px;
+}
