@@ -4,21 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon_fotogram.png" type="image/x-icon">
     <title>Fotogram</title>
 
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
 
+    <script>
+        function logDialogClickOuter(event) {
+            console.log("DialogClicked outer");
+            event.stopPropagation();
+            closeDialog(event);
+        }
+
+        function logDialogClickInner(event) {
+            console.log("DialogClicked inner");
+
+        }
+    </script>
+
 </head>
 
 <body onload="render()">
     <header>
-        <img src="./img/logo_fotogram.svg" alt="">
+        <img class="logo" src="./img/logo_fotogram.svg" alt="">
     </header>
 
-    <main class="content"></main>
+    <main id="content"></main>
 
-    <footer></footer>
+    <div id="dialog" class="dialog d-none" onclick="closeDialog(event)">
+    </div>
+    
+    <footer>
+        <img class="logo" src="./img/logo_fotogram.svg" alt="">
+        <span>© Jan Cieslik 2024</span>
+    </footer>
 </body>
 
 </html>
